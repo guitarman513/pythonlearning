@@ -12,7 +12,13 @@ class PopQuiz(Generic[T]):
 
 
 class ReportCard:
-    def __init__(self, gym=None, art=None, math=None, science=None) -> None:
+    def __init__(
+            self, 
+            gym: Optional[PopQuiz[bool]] = None, 
+            art = None, 
+            math = None, 
+            science = None,
+        ) -> None:
         self.gym: Optional[PopQuiz[bool]] = gym
         self.art: Optional[PopQuiz[bool]] = art
         self.math: Optional[PopQuiz[int]] = math
